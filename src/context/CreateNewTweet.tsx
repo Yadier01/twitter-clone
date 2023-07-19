@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 export type CreateNewTweetContextType = {
   userInput: string;
   handleInputChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  tweet: any;
+  tweet: string[];
   tweetsHandlerSubmit: (e: any) => void;
 };
 
@@ -11,7 +11,7 @@ export const CreateNewTweet = createContext<CreateNewTweetContextType | null>(
 );
 const CreateNewTweetProvider = ({ children }: any) => {
   const [userInput, setUserInput] = useState("");
-  const [tweet, setTweet] = useState([]);
+  const [tweet, setTweet] = useState<string[]>([]);
 
   const handleInputChange = (e: any) => {
     setUserInput(e.target.value);
