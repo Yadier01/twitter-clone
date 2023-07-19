@@ -1,10 +1,14 @@
-import { useState } from "react";
 import Button from "../components/button";
 import { Link } from "react-router-dom";
-
+import {
+  CreateNewTweet,
+  CreateNewTweetContextType,
+} from "../context/CreateNewTweet";
+import { useContext } from "react";
 function Home() {
-  const [count, setCount] = useState(0);
-
+  const { userInput, tweet } = useContext(
+    CreateNewTweet
+  ) as CreateNewTweetContextType;
   return (
     <main className="h-screen">
       <div className="h-14">
@@ -23,6 +27,11 @@ function Home() {
           Tweet
         </Link>
       </div>
+      {tweet.map((tweet: any, idx: any) => (
+        <div key={idx}>
+          <h1>{tweet}</h1>
+        </div>
+      ))}
     </main>
   );
 }
