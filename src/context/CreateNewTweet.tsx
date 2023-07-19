@@ -17,7 +17,7 @@ const CreateNewTweetProvider = ({ children }: any) => {
     setUserInput(e.target.value);
   };
 
-  const tweetsHandlerSubmit = (e) => {
+  const tweetsHandlerSubmit = (e: any) => {
     e.preventDefault();
     setTweet((prevTweet) => {
       return [...prevTweet, userInput];
