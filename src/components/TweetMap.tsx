@@ -9,7 +9,7 @@ import { TopSection } from "./TopSection";
 export const TweetMap = () => {
   const { tweet } = useContext(CreateNewTweet) as CreateNewTweetContextType;
   return (
-    <div>
+    <div className="">
       <TopSection />
       <div className="">
         {tweet.map((tweet: any, idx: any) => (
