@@ -1,7 +1,6 @@
 import Header from "../components/header";
 import RightSection from "../components/RightSection";
 import { NewTweetButton } from "../components/NewTweetButton";
-import { TopSection } from "../components/TopSection";
 import { TweetMap } from "../components/TweetMap";
 import { useEffect, useState } from "react";
 
