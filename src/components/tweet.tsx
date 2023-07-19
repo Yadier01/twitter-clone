@@ -21,8 +21,8 @@ const tweet = ({ tweet, idx }: Props) => {
         <div className="w-full justify-around flex flex-col px-4 gap-1">
           <div className="flex justify-between ">
             <div className="flex gap-2">
-              <p className="text-white">demond</p>
-              <p className="text-grey-800">@demond</p>
+              <p className="text-white">User</p>
+              <p className="text-grey-800">@User</p>
             </div>
             <Button
               text="..."

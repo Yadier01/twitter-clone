@@ -5,10 +5,10 @@ import {
   CreateNewTweet,
   CreateNewTweetContextType,
 } from "../context/CreateNewTweet"; // Import the CreateNewTweetContextType
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const NewTweet = () => {
-  const { handleInputChange, tweetsHandlerSubmit } = useContext(
+  const { handleInputChange, tweetsHandlerSubmit, input } = useContext(
     CreateNewTweet
   ) as CreateNewTweetContextType; // Add the type assertion
 
@@ -23,8 +23,10 @@ const NewTweet = () => {
           <div>
             <Button
               text="tweet"
-              styles="bg-blue-400 py-1 text-white px-5 text-center rounded-2xl"
-            />
+              styles={`${
+                input ? "bg-blue-300" : "bg-blue-700"
+              } py-1 text-white px-5 text-center rounded-2xl`}
+            ></Button>
           </div>
         </div>
 
