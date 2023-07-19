@@ -13,31 +13,33 @@ const NewTweet = () => {
   ) as CreateNewTweetContextType; // Add the type assertion
 
   return (
-    <div>
-      <Link to={"/"}>back</Link>
-      <div className="flex py-2 justify-between ">
-        <form onSubmit={(e) => tweetsHandlerSubmit(e)}>
-          <div className="flex gap-8 px-4">
-            <span>Drafts</span>
-            <Button text="Tweet" />
-          </div>
-        </form>
-        <div>
-          <div className="my-4">
-            <div>user img{/*user Image  */}</div>
-            <Textarea
-              placeholder="Whats is happening?!"
-              styles="w-screen h-32 items-start flex "
-              onChange={(e) => handleInputChange(e)}
+    <>
+      <form
+        onSubmit={(e) => tweetsHandlerSubmit(e)}
+        className="flex flex-col justify-between"
+      >
+        <div className="flex items-center justify-between gap-4 px-4 ">
+          <Link to={"/"}>back</Link>
+          <div>
+            <Button
+              text="tweet"
+              styles="bg-blue-400 py-1 text-white px-5 text-center rounded-2xl"
             />
-            <div>
-              <Button text="Everyone can reply" />
-            </div>
-            <div>{/* add icons */}</div>
           </div>
         </div>
-      </div>
-    </div>
+
+        <div className="flex flex-col">
+          <Textarea
+            placeholder="What's happening?"
+            onChange={(e) => handleInputChange(e)}
+            styles="w-screen h-28 resize-none"
+          />
+          <div>
+            <p>everyone can reply</p>
+          </div>
+        </div>
+      </form>
+    </>
   );
 };
 
