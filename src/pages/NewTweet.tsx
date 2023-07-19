@@ -5,7 +5,7 @@ import {
   CreateNewTweet,
   CreateNewTweetContextType,
 } from "../context/CreateNewTweet"; // Import the CreateNewTweetContextType
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 const NewTweet = () => {
   const { handleInputChange, tweetsHandlerSubmit, input } = useContext(
